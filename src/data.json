@@ -1,0 +1,105 @@
+{
+  "locales": {
+    "yogurmet": {
+      "nombre": "Yogurmet",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/6/69/Yogurmet_frozen_yogurt.jpg",
+      "direccion": "En algún lugar de Guayaquil",
+      "telefonos": "4 2209817",
+      "valoracion": 4,
+      "favoritos": 0,
+      "comentarios": [],
+      "productos": [{
+        "nombre": "Malteada de fresa",
+        "precio": "$6.00",
+        "descripcion": "Refrescante malteada de fresa.",
+        "imagen": "https://pixabay.com/static/uploads/photo/2015/11/03/15/42/milkshake-1021027_960_720.jpg"
+      }],
+      "categorias": {
+        "malteadas": true
+      }
+    }, 
+    "burgerqueen": {
+      "nombre": "Burger Queen",
+      "logo": "https://pixabay.com/static/uploads/photo/2014/04/02/17/00/burger-307648_960_720.png",
+      "direccion": "En algún lugar de Guayaquil",
+      "telefonos": "4 2209817",
+      "valoracion": 1,
+      "favoritos": 0,
+      "comentarios": [],
+      "productos": [{
+        "nombre": "Bacon Looper",
+        "precio": "$5.00",
+        "descripcion": "Deliciosa hamburguesa con tocino y queso.",
+        "imagen": "https://i.ytimg.com/vi/dCjn9NuabOA/maxresdefault.jpg"
+      }, {
+        "nombre": "Cheese Stack",
+        "precio": "$3.00",
+        "descripcion": "Espectacular hamburguesa con doble carne y queso.",
+        "imagen": "https://i.ytimg.com/vi/6j81-LsJ_GE/maxresdefault.jpg"
+      }],
+      "categorias": {
+        "hamburguesas": true,
+        "malteadas": true
+      }
+    },
+    "mclucas": {
+      "nombre": "McLucas",
+      "logo": "https://pixabay.com/static/uploads/photo/2014/04/03/11/55/burger-312584_960_720.png",
+      "direccion": "En algún lugar de Guayaquil",
+      "telefonos": "4 2209817",
+      "valoracion": 2,
+      "favoritos": 0,
+      "comentarios": [],
+      "productos": [{
+        "nombre": "McDoblePollo",
+        "precio": "$4.00",
+        "descripcion": "Deliciosa hamburguesa de pollo.",
+        "imagen": "https://pixabay.com/static/uploads/photo/2016/02/16/11/48/burger-1203211_960_720.jpg"
+      }],
+      "categorias": {
+        "hamburguesas": true,
+        "malteadas": true
+      }
+    },
+    "pizzahouse": {
+      "nombre": "Pizza House",
+      "logo": "https://pixabay.com/static/uploads/photo/2016/06/01/12/59/pizza-1428931_960_720.png",
+      "direccion": "En algún lugar de Guayaquil",
+      "telefonos": "4 2209817",
+      "valoracion": 3,
+      "favoritos": 0,
+      "comentarios": [],
+      "productos": [{
+        "nombre": "Familiar",
+        "precio": "$6.00",
+        "descripcion": "Pizza familiar extra grande con pepperoni.",
+        "imagen": "https://i.ytimg.com/vi/qSRTbJKDMk4/maxresdefault.jpg"
+      }],
+      "categorias": {
+        "pizzas": true
+      }
+    }
+  },
+  "categorias": {
+    "malteadas": {
+      "nombre": "Malteadas",
+      "locales": {
+        "burgerqueen": true,
+        "mclucas": true
+      }
+    },
+    "hamburguesas": {
+      "nombre": "Hamburguesas",
+      "locales": {
+        "burgerqueen": true,
+        "mclucas": true
+      }
+    },
+    "pizzas": {
+      "nombre": "Pizzas",
+      "locales": {
+        "pizzahouse": true
+      }
+    }
+  }
+}
