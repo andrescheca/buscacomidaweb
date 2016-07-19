@@ -1,0 +1,24 @@
+{
+  "name": "buscacomidaweb",
+  "description": "Sitio web para encontrar lugares de comida",
+  "main": "index.js",
+  "authors": [
+    "Andrés Checa"
+  ],
+  "license": "BSD-2-Clause",
+  "homepage": "https://github.com/andrescheca/buscacomidaweb",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.6.3",
+    "jquery": "2.2.4"
+  }
+}

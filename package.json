@@ -1,5 +1,5 @@
 {
-  "name": "muchahambre",
+  "name": "buscacomidaweb",
   "version": "0.0.1",
   "description": "Sitio web para encontrar lugares de comida",
   "main": "index.js",
@@ -12,8 +12,9 @@
     "type": "git",
     "url": "https://github.com/andrescheca/buscacomidaweb.git"
   },
-  "license": "ISC",
+  "license": "BSD-2-Clause",
   "devDependencies": {
+    "bower": "^1.7.9",
     "browser-sync": "^2.13.0",
     "gulp": "^3.9.1",
     "gulp-stylus": "^2.5.0",
