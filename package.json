@@ -8,6 +8,10 @@
     "start": "node node_modules/gulp/bin/gulp.js"
   },
   "author": "Andrés Checa",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andrescheca/buscacomidaweb.git"
+  },
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.13.0",
