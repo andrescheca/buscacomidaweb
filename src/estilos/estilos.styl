@@ -1,0 +1,124 @@
+$colorPrincipal = #F05F40
+$colorSecundario = #eb3812
+$colorTextoBlanco = rgba(255, 255, 255, 0.7)
+
+html, body
+  height: 100%
+  width: 100%
+
+header
+  min-height: auto
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  background-size: cover
+  -o-background-size: cover
+  background-position: center
+  background-image: url('../img/fondo.jpg')
+  color: white
+  .contenido-cabecera
+    position: relative
+    text-align: center
+    padding: 100px 15px 100px
+    width: 100%
+    // -webkit-transition: all 0.35s
+    // -moz-transition: all 0.35s
+    // transition: all 0.35s
+
+section
+  margin-top: 50px
+
+.ancla
+  position: relative;
+  bottom: 20px;
+
+.boton-buscar
+  background-color: $colorPrincipal
+  border-color: $colorPrincipal
+  color: $colorTextoBlanco
+  text-transform: uppercase
+  font-weight: 700
+  &:hover, &:focus, &:active, &:focus:active
+    background-color: $colorSecundario
+    border-color: $colorSecundario
+    color: white
+
+.listado-locales
+  height: 700px
+  overflow: auto
+
+// Sobrescribir las clases de bootstrap
+.navbar-default
+  -webkit-transition: all 0.35s
+  -moz-transition: all 0.35s
+  transition: all 0.35s
+  .nav
+    li
+      a, a:focus
+        text-transform: uppercase
+        font-weight: 700
+        font-size: 13px
+      a:hover, a:focus:hover
+        color: $colorPrincipal
+    .active
+      a
+        color: $colorPrincipal !important
+        background-color: transparent
+      a:hover
+        color: $colorPrincipal
+        background-color: transparent
+  .navbar-header
+    .navbar-brand
+      color: $colorPrincipal
+      font-weight: 700
+      text-transform: uppercase
+    .navbar-brand:hover, .navbar-brand:focus
+      color: $colorSecundario
+    .navbar-toggle
+      font-size: 12px
+
+.navbar-default.affix
+  background-color: white
+  border-color: rgba(34, 34, 34, 0.05)
+  .nav
+    li
+      a, a:focus
+        color: #333
+      a:hover, a:focus:hover
+        color: $colorPrincipal
+  .navbar-header
+    .navbar-brand
+      color: $colorPrincipal
+    .navbar-brand:hover, .navbar-brand:focus
+      color: $colorSecundario
+    
+
+// MediaQuery para elementos mayores a tablets
+@media (min-width: 768px)
+  header
+    min-height: 100%
+  header
+    .contenido-cabecera
+      position: absolute
+      top: 50%
+      -webkit-transform: translateY(-50%)
+      -ms-transform: translateY(-50%)
+      transform: translateY(-50%)
+      padding: 0 50px
+      .contenido-cabecera-interno
+        max-width: 1000px
+        margin-left: auto
+        margin-right: auto
+  .navbar-default
+    background-color: transparent
+    border-color: rgba(255, 255, 255, 0.3)
+    .navbar-header
+      .navbar-brand
+        color: $colorTextoBlanco
+      .navbar-brand:hover, .navbar-brand:focus
+        color: white
+    .nav
+      li
+        a, a:focus
+          color: $colorTextoBlanco
+        a:hover, a:focus:hover
+          color: white
