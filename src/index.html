@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" ng-app="buscacomida">
 <head>
   <meta charset="UTF-8">
   <title>BuscaComida</title>
@@ -11,7 +11,7 @@
   <!-- Hoja de estilos -->
   <link rel="stylesheet" href="./css/estilos.css">
 </head>
-<body id="inicio">
+<body id="inicio" ng-controller="AppCtrl">
   <nav class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="360">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -47,7 +47,7 @@
   <section>
     <div class="container">
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Encuentra aquí tu próximo restaurante y comparte tu experiencia.">
+        <input type="text" class="form-control" ng-model="buscar" placeholder="Encuentra aquí tu próximo restaurante y comparte tu experiencia.">
         <span class="input-group-btn">
           <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
         </span>
@@ -63,136 +63,17 @@
       </div>
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 listado-locales">
-          <div class="media">
+          <div class="media" ng-repeat="local in locales">
             <div class="media-left media-top">
-              <a href="#">
-                <img class="media-object" src="http://placehold.it/128x128" alt="">
+              <a href="">
+                <img class="media-object logo" ng-src="{{local.logo}}" alt="">
               </a>
             </div>
             <div class="media-body">
-            <h4 class="media-heading">Burger Queen</h4>
-            <p>Texto del local</p>
-            <p>#numeros</p>
-            </div>
-          </div>
-          <div class="media">
-            <div class="media-left media-top">
-              <a href="#">
-                <img class="media-object" src="http://placehold.it/128x128" alt="">
-              </a>
-            </div>
-            <div class="media-body">
-            <h4 class="media-heading">Burger Queen</h4>
-            <p>Texto del local</p>
-            <p>#numeros</p>
-            </div>
-          </div>
-          <div class="media">
-            <div class="media-left media-top">
-              <a href="#">
-                <img class="media-object" src="http://placehold.it/128x128" alt="">
-              </a>
-            </div>
-            <div class="media-body">
-            <h4 class="media-heading">Burger Queen</h4>
-            <p>Texto del local</p>
-            <p>#numeros</p>
-            </div>
-          </div>
-          <div class="media">
-            <div class="media-left media-top">
-              <a href="#">
-                <img class="media-object" src="http://placehold.it/128x128" alt="">
-              </a>
-            </div>
-            <div class="media-body">
-            <h4 class="media-heading">Burger Queen</h4>
-            <p>Texto del local</p>
-            <p>#numeros</p>
-            </div>
-          </div>
-          <div class="media">
-            <div class="media-left media-top">
-              <a href="#">
-                <img class="media-object" src="http://placehold.it/128x128" alt="">
-              </a>
-            </div>
-            <div class="media-body">
-            <h4 class="media-heading">Burger Queen</h4>
-            <p>Texto del local</p>
-            <p>#numeros</p>
-            </div>
-          </div>
-          <div class="media">
-            <div class="media-left media-top">
-              <a href="#">
-                <img class="media-object" src="http://placehold.it/128x128" alt="">
-              </a>
-            </div>
-            <div class="media-body">
-            <h4 class="media-heading">Burger Queen</h4>
-            <p>Texto del local</p>
-            <p>#numeros</p>
-            </div>
-          </div>
-          <div class="media">
-            <div class="media-left media-top">
-              <a href="#">
-                <img class="media-object" src="http://placehold.it/128x128" alt="">
-              </a>
-            </div>
-            <div class="media-body">
-            <h4 class="media-heading">Burger Queen</h4>
-            <p>Texto del local</p>
-            <p>#numeros</p>
-            </div>
-          </div>
-          <div class="media">
-            <div class="media-left media-top">
-              <a href="#">
-                <img class="media-object" src="http://placehold.it/128x128" alt="">
-              </a>
-            </div>
-            <div class="media-body">
-            <h4 class="media-heading">Burger Queen</h4>
-            <p>Texto del local</p>
-            <p>#numeros</p>
-            </div>
-          </div>
-          <div class="media">
-            <div class="media-left media-top">
-              <a href="#">
-                <img class="media-object" src="http://placehold.it/128x128" alt="">
-              </a>
-            </div>
-            <div class="media-body">
-            <h4 class="media-heading">Burger Queen</h4>
-            <p>Texto del local</p>
-            <p>#numeros</p>
-            </div>
-          </div>
-          <div class="media">
-            <div class="media-left media-top">
-              <a href="#">
-                <img class="media-object" src="http://placehold.it/128x128" alt="">
-              </a>
-            </div>
-            <div class="media-body">
-            <h4 class="media-heading">Burger Queen</h4>
-            <p>Texto del local</p>
-            <p>#numeros</p>
-            </div>
-          </div>
-          <div class="media">
-            <div class="media-left media-top">
-              <a href="#">
-                <img class="media-object" src="http://placehold.it/128x128" alt="">
-              </a>
-            </div>
-            <div class="media-body">
-            <h4 class="media-heading">Burger Queen</h4>
-            <p>Texto del local</p>
-            <p>#numeros</p>
+            <h4 class="media-heading">{{local.nombre}}</h4>
+            <p>{{local.direccion}}</p>
+            <p>{{local.telefonos}}</p>
+            <p><i class="fa fa-star" ng-repeat="indice in rango(local.valoracion) track by $index"></i></p>
             </div>
           </div>
         </div>
@@ -264,6 +145,7 @@
 
   <script src="./lib/jquery/dist/jquery.min.js"></script>
   <script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="./lib/angular/angular.min.js"></script>
   <script src="./js/principal.js"></script>
 
 </body>
