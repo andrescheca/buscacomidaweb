@@ -55,6 +55,22 @@
     </div>
   </section>
 
+  <section class="container form-horizontal">
+    <div class="form-group">
+      <label for="valoracion" class="col-sm-2 control-label">Valoración</label>
+      <div class="col-sm-10">
+        <select class="form-control" id="valoracion" ng-model="valoracion">
+          <option value='' selected="selected">Todos</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
   <section>
     <div class="container">
       <div class="row">
@@ -63,7 +79,7 @@
       </div>
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 listado-locales">
-          <div class="media" ng-repeat="local in locales">
+          <div class="media" ng-repeat="local in locales | filter:buscar | rating:valoracion">
             <div class="media-left media-top">
               <a href="">
                 <img class="media-object logo" ng-src="{{local.logo}}" alt="">
