@@ -21,8 +21,8 @@
     "burgerqueen": {
       "nombre": "Burger Queen",
       "logo": "https://pixabay.com/static/uploads/photo/2014/04/02/17/00/burger-307648_960_720.png",
-      "direccion": "En algún lugar de Guayaquil",
-      "telefonos": "4 2209817",
+      "direccion": "Por el norte de Guayaquil",
+      "telefonos": "4 2209816",
       "valoracion": 1,
       "favoritos": 0,
       "comentarios": [],
@@ -45,8 +45,8 @@
     "mclucas": {
       "nombre": "McLucas",
       "logo": "https://pixabay.com/static/uploads/photo/2014/04/03/11/55/burger-312584_960_720.png",
-      "direccion": "En algún lugar de Guayaquil",
-      "telefonos": "4 2209817",
+      "direccion": "En el centro de Guayaquil",
+      "telefonos": "4 2209815",
       "valoracion": 2,
       "favoritos": 0,
       "comentarios": [],
@@ -64,8 +64,8 @@
     "pizzahouse": {
       "nombre": "Pizza House",
       "logo": "https://pixabay.com/static/uploads/photo/2016/06/01/12/59/pizza-1428931_960_720.png",
-      "direccion": "En algún lugar de Guayaquil",
-      "telefonos": "4 2209817",
+      "direccion": "Al norte de Guayaquil",
+      "telefonos": "4 2209814",
       "valoracion": 3,
       "favoritos": 0,
       "comentarios": [],
