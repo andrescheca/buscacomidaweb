@@ -1,19 +1,32 @@
-angular.module('buscacomida', [])
+var config = {
+  apiKey: "AIzaSyAOLBNMY56bOid254Exk1AM7vj6R4jm-6M",
+  authDomain: "buscacomida-adc63.firebaseapp.com",
+  databaseURL: "https://buscacomida-adc63.firebaseio.com",
+  storageBucket: "buscacomida-adc63.appspot.com",
+};
+
+firebase.initializeApp(config);
+
+angular.module('buscacomida', ['firebase'])
 // Controlador principal de la aplicación
-.controller('AppCtrl', ['$scope', '$http', function ($scope, $http) {
+.controller('AppCtrl', ['$scope', '$http', '$firebaseArray', function ($scope, $http, $firebaseArray) {
+  var refLocales = firebase.database().ref('locales').orderByChild('nombre');
+  $scope.locales = $firebaseArray(refLocales);
+
   $scope.buscar = '';
-  $scope.locales = [];
+  // $scope.locales = [];
   $scope.valoracion = '';
+
   // Pedido asíncrono de información
-  $http.get('data.json')
-    .then(function (respuesta) {
-      // $scope.locales = respuesta.data.locales;
-      angular.forEach(respuesta.data.locales, function (local, llave) {
-        $scope.locales.push(local);
-      })
-    }).catch(function (error) {
-      console.log(error);
-    });
+  // $http.get('data.json')
+  //   .then(function (respuesta) {
+  //     // $scope.locales = respuesta.data.locales;
+  //     angular.forEach(respuesta.data.locales, function (local, llave) {
+  //       $scope.locales.push(local);
+  //     })
+  //   }).catch(function (error) {
+  //     console.log(error);
+  //   });
   // Función para retornar un arreglo con un número
   // determinado de valores
   $scope.rango = function (numero) {
